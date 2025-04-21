@@ -1,0 +1,14 @@
+# Ignorar archivos de entorno
+*.env
+
+# Ignorar carpetas de configuración y temporales
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar carpeta específica dentro de src
+/src/myenv/
+
+# Ignorar todo lo que se llame pycache, sin importar su ruta
+**/pycache/

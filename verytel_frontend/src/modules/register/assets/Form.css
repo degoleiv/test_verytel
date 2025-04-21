@@ -1,0 +1,136 @@
+/* Estilos base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Contenedor raíz */
+#root {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Contenedor principal del formulario */
+.container_form {
+  
+  width: 90vh;
+  height: auto;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 30;
+}
+
+/* Formulario */
+.form-inline {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  display: inline-block;
+  width: 100%;
+  align-items: center;
+  padding: 25px 30px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form-inline label {
+  display: block;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.form-inline input[type="text"],
+.form-inline input[type="email"],
+.form-inline input[type="date"],
+.form-inline input[type="tel"],
+.form-inline select,
+textarea {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  transition: border-color 0.3s;
+}
+
+.form-inline input:focus,
+.form-inline select:focus,
+textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+textarea {
+  resize: vertical; /* Solo permite cambiar la altura */
+  overflow: auto;   /* Muestra scroll si el contenido excede */
+  width: 100%;      /* Mantiene el ancho fijo */
+  min-height: 100px;
+  max-height: 300px; /* Opcional: limita el crecimiento vertical */
+}
+
+/* Botón */
+button[type="submit"] {
+  background-color: #007BFF;
+  color: #fff;
+  margin-top: 20px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-inline input,
+  .form-inline select,
+  textarea {
+    margin: 0;
+  }
+}
+
+/* Inputs con errores */
+.input-error {
+  border-color: red;
+  background-color: #ffe6e6;
+}
+
+/* Mensajes de error */
+span {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Mensajes de éxito */
+.success {
+  color: green;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
