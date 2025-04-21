@@ -17,6 +17,8 @@ application.add_middleware(
 def migrate_register():
     from app.security_fronts.domain.entities.security_front import FrenteSeguridad
     from app.register.domain.entities.citizen import Ciudadano
+    
+    from app.register.domain.entities.validation_codes import ValidationCode
     from app.config.database.base import Base
     from app.config.database.db_connection_factory import DatabaseConnectionFactory
 
@@ -57,13 +59,15 @@ def get_register_service():
     
     from app.register.infrastructure.service.register_service_impl import RegisterServiceImpl
     
+    from app.register.infrastructure.repositories.validationcode_repository_impl import ValidationCodeRepositoryImpl
     
     
     db = DatabaseConnectionFactory.get_session()
     repo = RegisterRepositoryImpl(db)
+    code = ValidationCodeRepositoryImpl(db)
     email = EmailServiceImpl()
     
-    service = RegisterServiceImpl(repo, email)
+    service = RegisterServiceImpl(repo, email, code)
     try:
          yield service
     finally:

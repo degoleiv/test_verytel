@@ -6,6 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import { Validation } from './modules/verification/component/Validation';
 import { ProtectedRoute } from './modules/verification/component/ProtectedRoute';
 import { ValidationProvider } from './modules/verification/hooks/ValidationContext';
+import { TableAdministration } from './modules/administration/component/TableAdministration';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ValidationProvider>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')).render(
             </ProtectedRoute>
           } />
         <Route path="*" element={<>No se encontro el recurso</>  }   />  
+        <Route path="/admin" element={<TableAdministration />} />
       </Routes>
     </Router>
     </ValidationProvider>

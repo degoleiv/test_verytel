@@ -1,0 +1,81 @@
+/* Styling for the main container */
+.table-administration {
+    width: 100%;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .table-container {
+    max-width: 100%;       
+    margin: 0 auto;         
+    overflow-x: auto;      
+    margin-top: 20px;      
+    padding: 10px;         
+  }
+  .filters {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .filters label {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for checkboxes */
+  .filters input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  /* Table styling */
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-table th {
+    background-color: #007BFF;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .user-table td {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .user-table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .user-table td {
+    text-align: center;
+  }
+  
+  /* Message when no data is available */
+  .user-table p {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+  }
+  
+  /* Error message styling */
+  p[style="color: red"] {
+    color: red;
+    font-weight: bold;
+  }
+  
